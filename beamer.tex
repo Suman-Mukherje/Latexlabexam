@@ -1,0 +1,53 @@
+\documentclass[aspectratio=169]{beamer}
+
+
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usetheme{Bergen}
+\usecolortheme{beaver}
+
+\title{Create slides using beamer}
+\author{Jaydeep Paul}
+\date{\today}
+\begin{document}
+\maketitle
+\begin{frame}
+\tableofcontents
+\end{frame}
+\section{Introduction}
+\begin{frame}[t]{Title}
+Theorems can easily be defined:
+
+\begin{theorem}
+Let \(f\) be a function whose derivative exists in every point, then \(f\) is a continuous function.
+\end{theorem}
+
+\end{frame}
+
+\begin{frame}
+And a consequence of theorem \ref{pythagorean} is the statement in the next 
+corollary.
+
+\begin{corollary}
+There's no right rectangle whose sides measure 3cm, 4cm, and 6cm.
+\end{corollary}
+
+You can reference theorems such as \ref{pythagorean} when a label is assigned.
+
+\begin{lemma}
+Given two line segments whose lengths are \(a\) and \(b\) respectively there is a 
+real number \(r\) such that \(b=ra\).
+\end{lemma}
+
+\begin{theorem}
+Let \(f\) be a function whose derivative exists in every point, then \(f\) is a continuous function.
+\end{theorem}
+\end{frame}
+
+\begin{frame}
+
+\end{frame}
+
+\end{document}

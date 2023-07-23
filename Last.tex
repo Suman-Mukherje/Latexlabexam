@@ -1,0 +1,144 @@
+\documentclass{report}
+\usepackage[margin=2cm]{geometry}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\newtheorem{theorem}{MyTheorem}[chapter]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\usepackage{caption}
+\usepackage{subcaption}
+
+\begin{document}
+
+\chapter{Theorem and definition}
+\section{Introduction}
+Theorems can easily be defined:
+
+\begin{theorem}
+Let \(f\) be a function whose derivative exists in every point, then \(f\) is a continuous function.
+\end{theorem}
+
+\section{Second}
+\begin{theorem}[Pythagorean theorem]
+\label{pythagorean}
+This is a theorem about right triangles and can be summarised in the next 
+equation \[ x^2 + y^2 = z^2 \]
+\end{theorem}
+
+And a consequence of theorem \ref{pythagorean} is the statement in the next 
+corollary.
+
+\begin{corollary}
+There's no right rectangle whose sides measure 3cm, 4cm, and 6cm.
+\end{corollary}
+
+You can reference theorems such as \ref{pythagorean} when a label is assigned.
+
+\begin{lemma}
+Given two line segments whose lengths are \(a\) and \(b\) respectively there is a 
+real number \(r\) such that \(b=ra\).
+\end{lemma}
+
+\begin{theorem}
+Let \(f\) be a function whose derivative exists in every point, then \(f\) is a continuous function.
+\end{theorem}
+
+\begin{remark}
+This statement is true, I guess.
+\end{remark}
+
+And the next is a somewhat informal definition
+
+\begin{definition}[Sample]
+This is a sample definition.
+\end{definition}
+
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\begin{proof}
+This is proved.
+\end{proof}
+
+\renewcommand\qedsymbol{QED}
+
+\begin{proof}
+This is proved.
+\end{proof}
+
+\chapter{Images and Tables}
+
+\begin{figure}[!h]
+     \centering
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img}
+         \caption{One}
+         \label{fig:onesub}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img}
+         \caption{Two}
+         \label{fig:twosub}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{img}
+         \caption{Three}
+         \label{fig:threesub}
+     \end{subfigure}
+        \caption{Three simple images}
+        \label{fig:three imgs}
+\end{figure}
+
+\begin{table}[h]
+    \begin{subtable}[h]{0.45\textwidth}
+        \centering
+        \begin{tabular}{l | l | l}
+        Day & Max Temp & Min Temp \\
+        \hline \hline
+        Mon & 20 & 13\\
+        Tue & 22 & 14\\
+        Wed & 23 & 12\\
+        Thurs & 25 & 13\\
+        Fri & 18 & 7\\
+        Sat & 15 & 13\\
+        Sun & 20 & 13
+       \end{tabular}
+       \caption{First Week}
+       \label{tab:week1}
+    \end{subtable}
+    \hfill
+    \begin{subtable}[h]{0.45\textwidth}
+        \centering
+        \begin{tabular}{l | l | l}
+        Day & Max Temp & Min Temp \\
+        \hline \hline
+        Mon & 17 & 11\\
+        Tue & 16 & 10\\
+        Wed & 14 & 8\\
+        Thurs & 12 & 5\\
+        Fri & 15 & 7\\
+        Sat & 16 & 12\\
+        Sun & 15 & 9
+        \end{tabular}
+        \caption{Second Week}
+        \label{tab:week2}
+     \end{subtable}
+     \caption{Max and min temps recorded in the first two weeks of July}
+     \label{tab:temps}
+\end{table}
+
+\end{document}
